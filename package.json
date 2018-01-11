@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/html/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,20 @@
   "bugs": {
     "url": "https://github.com/ndr09/esame_IS2_12_01_18/issues"
   },
-  "homepage": "https://github.com/ndr09/esame_IS2_12_01_18#readme"
+  "homepage": "https://github.com/ndr09/esame_IS2_12_01_18#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "mongoose": "^4.13.9",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "windows-1252": "^1.0.0",
+    "xml-js": "^1.6.2"
+  },
+  "devDependencies": {
+    "jest": "^22.0.6"
+  }
 }
