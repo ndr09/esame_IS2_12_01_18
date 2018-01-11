@@ -11,9 +11,11 @@
 <body>
 
 
-<form action="/users" method="get">
+<form action="/users" method="post">
   <fieldset>
     <legend>Personal information:</legend>
+	email:<br>
+	<input type="text" name="email" value="mariorossi@email.it"><br>
     First name:<br>
     <input type="text" name="firstname" value="Mickey"><br>
     Last name:<br>
@@ -39,7 +41,7 @@
 
         const ul = document.getElementById('authors'); // Get the list where we will place our authors
 
-        const url = 'https://randomuser.me/api/?results=10'; // Get 10 random users        
+        const url = 'https://mysterious-bayou-86699.herokuapp.com/users/'; // Get 10 random users        
 
         fetch(url)
 
@@ -55,17 +57,17 @@
 
                     let li = document.createElement('li'); //  Create the elements we need
 
-                    let img = document.createElement('img');
+                    //let img = document.createElement('img');
 
                     let span = document.createElement('span');
 
-                    img.src = author.picture.medium;  // Add the source of the image to be the src of the img element
+                    //img.src = author.picture.medium;  // Add the source of the image to be the src of the img element
 
-                    span.innerHTML = `${author.name.first} ${author.name.last}`; // Make the HTML of our span to be the first and last name of our author
+                    span.innerHTML = `${author.email} ${author.name} ${author.surname}`; // Make the HTML of our span to be the first and last name of our author
 
                     // Append all our elements
 
-                    li.appendChild(img);
+                    //li.appendChild(img);
 
                     li.appendChild(span);
 
